@@ -1,0 +1,212 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: black;
+  overflow: hidden;
+  font-family:  'Raleway', sans-serif;
+  padding: 0;
+  }
+.animation{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+  color: #FFFFFF;
+  line-height: 60px;
+  letter-spacing: 1px;
+  width: 438px;
+  background-color: rgba(227, 37, 40, 1.00);
+  animation: words-animation ease 3s;
+
+}
+.animation span{
+  margin: 20px;
+  }
+  .animation:before{
+    content: '';
+    position: absolute;
+    left: 900%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%,#000000 10%, #000000 100%);
+    animation: hide 5s linear forwards;
+  }
+@keyframes words-animation{
+    0%{
+      left: 10%;
+      letter-spacing: 1000px;
+      background: none;}
+    70%{
+      background: none;
+      letter-spacing: 5px;
+      left: 25%;}
+    80%{
+      width:0px;
+      background-color: rgba(227, 37, 40, 1.00);
+    }
+    90%{
+      width: 500px;}
+
+  }
+  .sub{
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    color: #FFFFFF;
+    line-height: 60px;
+    letter-spacing: 1px;
+
+  }
+/* nav bar code*/
+  *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+
+      }
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  background-color: transparent;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links a{
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.burger{
+  display: none;
+}
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+.btn{
+  width: 150px;
+  height: 40px;
+  background: none;
+  border: 4px solid;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 12px;
+  position: relative;
+  }
+
+  .btn::before,.btn::after{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 4px;
+    background: rgba(227, 37, 40, 1.00);
+    transform: skewX(50deg);
+    transition: .4s linear;
+  }
+
+  .btn::before{
+    top: -4px;
+    left: 10%;
+  }
+  .btn::after{
+    bottom: -4px;
+    right: 10%
+  }
+
+  .btn:hover::before{
+    left: 80%;
+  }
+  .btn:hover::after{
+    right: 80%;
+  }
+  /* nav bar button code end */
+
+
+/* social media buttons */
+  .middle{
+    position: absolute;
+    top: 67.5%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn2{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #f1f1f1;
+    margin: 5px;
+    border-radius: 20%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: #3498db;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .btn2 i{
+    line-height: 55px;
+    font-size: 26px;
+    transition: 0.2s linear
+  }
+  .btn2:hover i{
+    transform: scale(1.3);
+    color: #f1f1f1;
+  }
+
+  .btn2::before{
+    content: "";
+    position: absolute;
+    width: 190%;
+    height: 152%;
+    background: #3498db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 110%;
+  }
+
+  .btn2:hover::before{
+    animation: aaa 1s 1;
+    top: -20%;
+    left: -20%;
+  }
+
+  @keyframes aaa {
+    0%{
+      left: -110%;
+      top: 100%;
+
+    }50%{
+      left: 10%;
+      top: -30%;
+
+    }100%{
+      top: -10%;
+      left: -10%;
+
+    }
+
+  }
